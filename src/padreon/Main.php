@@ -42,4 +42,14 @@ class Main extends PluginBase implements Listener{
          if(($ev->getPlayer()->getGamemode() === 1) && ($ev->getBlock()->getId() === $dropper)) $ev->setCancelled();
          
          }
+        public function onInteract(PlayerInteractEvent $ev){
+         $beacon = 138; // Beacon
+         if(($ev->getPlayer()->getGamemode() === 1) && ($ev->geyBlock()->getId() === $beacon)) $ev->setCancelled();
+         
+         }
+        public function onInteract(PlayerInteractEvent $ev){
+         $dispenser = 23; //Item Id Dispenser
+         if(($ev->getPlayer()->getGamemode() === 1) && ($ev->getBlock()->getId() === $dispenser)) $ev->setCancelled();
+         
+         }
  
