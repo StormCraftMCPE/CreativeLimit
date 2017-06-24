@@ -23,8 +23,12 @@ class Main extends PluginBase implements Listener{
  
    
         public function onInteract(PlayerInteractEvent $ev){
-        $chest = 54; //Id Chest
-        if(($ev->getPlayer()->getGamemode() === 1) && ($ev->getBlock()->getId() === $chest)) $ev->setCancelled();
+         $chest = 54; //Id Chest
+         if(($ev->getPlayer()->getGamemode() === 1) && ($ev->getBlock()->getId() === $chest)) $ev->setCancelled();}
  
         }
-}
+        public function onInteract(PlayerInteractEvent $ev){
+         $trapchest = 146; //trapchest 
+         if(($ev->getPlayer()->getGamemode() === 1) && ($ev->getBlock()->getId() === $trapchest)) $ev->setCancelled();}
+
+        }
