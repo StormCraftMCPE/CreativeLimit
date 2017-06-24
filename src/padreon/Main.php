@@ -32,3 +32,14 @@ class Main extends PluginBase implements Listener{
          if(($ev->getPlayer()->getGamemode() === 1) && ($ev->getBlock()->getId() === $trapchest)) $ev->setCancelled();
 
         }
+        public function onInteract(PlayerInteractEvent $ev){
+         $endchest = 130; // end chest
+         if(($ev->getPlayer()->getGamemode() === 1) && ($ev->getBlock()->getId() === $endchest)) $ev->setCancelled();
+         
+        }
+        public function onInteract(PlayerInteractEvent $ev){
+         $dropper = 125; // Dropper ID
+         if(($ev->getPlayer()->getGamemode() === 1) && ($ev->getBlock()->getId() === $dropper)) $ev->setCancelled();
+         
+         }
+ 
