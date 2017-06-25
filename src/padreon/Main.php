@@ -71,69 +71,9 @@ class Main extends PluginBase implements Listener{
 	public function onInteract(PlayerInteractEvent $ev){
         $brewing = 379; //Id BrewingStand
         if(($ev->getPlayer()->getGamemode() === 1) && ($ev->getBlock()->getId() === $brewing)) $ev->setCancelled();
- 
-        }
-	public function onInteract(PlayerInteractEvent $ev){
-        $enchant = 116; //Id Enchantment Table
-        if(($ev->getPlayer()->getGamemode() === 1) && ($ev->getBlock()->getId() === $enchant)) $ev->setCancelled();
- 
-        }
-	public function onInteract(PlayerInteractEvent $ev){
-        $furnace = 61; //Id Furnace
-        if(($ev->getPlayer()->getGamemode() === 1) && ($ev->getBlock()->getId() === $furnace)) $ev->setCancelled();
- 
-        }
-		public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
-			$cmd = strlower($command->getName()):
-			switch($cmd){
-    
-				case "creative":
-                if (!($sender instanceof Player)){
-                    $sender->sendMessage(TextFormat::GREEN."Only work in Game!");
-                    return true;
-                }
-                $player = $this->getServer()->getPlayer($sender->getName());
-                
-                if ($player->hasPermission("limit.creative")){
-                    if ($player->getGamemode() == 1){
-                        $player->sendMessage(TextFormat::RED."You are already in creative mode!");
-                    } else {
-                        $player->setGamemode(1);
-                        $player->sendMessage(TextFormat::GREEN."You are now in creative mode!");
-						$player->getInventory()->clearAll();
-                    }
-                    return true;
-                    
-                } else {
-                    $player->sendMessage(TextFormat::RED."You don't have permission");
-                    return true;
-                }
-                break;
 
-      
-				case "survival":
-				  
-				 if (!($sender instanceof Player)){
-                    $sender->sendMessage(TextFormat::GREEN."Only work in Game!");
-                    return true;
-                }
-                $player = $this->getServer()->getPlayer($sender->getName());
-                
-                if ($player->hasPermission("limit.survival")){ //perm
-                    if ($player->getGamemode() == 0){
-                        $player->sendMessage(TextFormat::RED."You are already in survival mode!");
-                    } else {
-                        $player->setGamemode(0);
-                        $player->sendMessage(TextFormat::GREEN."You are now in survival mode!");
-						$player->getInventory()->clearAll();
-                    }
-                    return true;
-                    
-                } else {
-                    $player->sendMessage(TextFormat::RED."You don't have permission");
-                    return true;
-                }
-                break;
-			}
-		}
-}
+	
+		
+		
+		
+		
